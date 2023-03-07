@@ -10,17 +10,18 @@ async def main():
     owner = "ansible"
     repo = "ansible"
     query_url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
-    for i in range(16, 20):
+    for i in range(1):
         complete_data = []
         params = {
-            "per_page": 100,
-            "page": i,
+            "per_page": 1,
+            "page": 100,
             'state': 'closed'
         }
         headers = {'Authorization': f'token {token}'}
         async with aiohttp.ClientSession(headers=headers) as session:
             async with session.get(query_url, params=params) as r:
                 data = await r.json()
+                print(data)
                 for j in range(len(data)):
                     pr = data[j]
                     pull_request_json = {'merged_at': pr['merged_at'], 'author_followers': pr['user']['followers_url'],
