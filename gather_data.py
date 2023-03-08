@@ -6,18 +6,17 @@ import asyncio
 
 
 async def main():
-    token = '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'
-    owner = "ansible"
-    repo = "ansible"
+    token = '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'
+    owner = "django"
+    repo = "django"
     query_url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
-    for i in range(5, 20):
+    for i in range(10, 20):
         complete_data = []
         params = {
             "per_page": 100,
             "page": i,
             'state': 'closed',
-            'sort': 'popularity',
-            'direction': 'desc'
+            'sort': 'popularity'
 
         }
         headers = {'Authorization': f'token {token}'}
@@ -69,7 +68,7 @@ async def main():
 
                         complete_data.append(pull_request_json)
         print(i)
-        with open("new_data.json", "a") as outfile:
+        with open("django.json", "a") as outfile:
             json.dump(complete_data, outfile)
 
 
