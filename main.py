@@ -6,7 +6,7 @@ import asyncio
 
 
 async def main():
-    token = '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'
+    token = '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'
     owner = "ansible"
     repo = "ansible"
     query_url = f"https://api.github.com/repos/{owner}/{repo}/pulls"

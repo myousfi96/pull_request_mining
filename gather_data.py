@@ -5,9 +5,9 @@ import asyncio
 
 
 async def main():
-    token = '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'
-    owner = "django"
-    repo = "django"
+    token = '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'
+    owner = "scikit-learn"
+    repo = "scikit-learn"
     query_url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
     for i in range(10, 20):
         complete_data = []
@@ -15,7 +15,8 @@ async def main():
             "per_page": 100,
             "page": i,
             'state': 'closed',
-            'sort': 'popularity'
+            'sort': 'popularity',
+            'direction': 'dec'
         }
         headers = {'Authorization': f'token {token}'}
         async with aiohttp.ClientSession(headers=headers) as session:
