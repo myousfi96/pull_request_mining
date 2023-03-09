@@ -1,5 +1,4 @@
-import requests
-from pprint import pprint
+
 import json
 import aiohttp
 import asyncio
@@ -17,7 +16,6 @@ async def main():
             "page": i,
             'state': 'closed',
             'sort': 'popularity'
-
         }
         headers = {'Authorization': f'token {token}'}
         async with aiohttp.ClientSession(headers=headers) as session:
