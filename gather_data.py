@@ -9,7 +9,7 @@ async def main():
     owner = "scikit-learn"
     repo = "scikit-learn"
     query_url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
-    for i in range(10, 20):
+    for i in range(0, 10):
         complete_data = []
         params = {
             "per_page": 100,
@@ -67,7 +67,7 @@ async def main():
 
                         complete_data.append(pull_request_json)
         print(i)
-        with open("django.json", "a") as outfile:
+        with open("gym.json", "a") as outfile:
             json.dump(complete_data, outfile)
 
 
