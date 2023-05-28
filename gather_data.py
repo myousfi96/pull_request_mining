@@ -1,11 +1,10 @@
-
 import json
 import aiohttp
 import asyncio
 
 
 async def main():
-    token = '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'
+    token = ''  # put Your own token here
     owner = "scikit-learn"
     repo = "scikit-learn"
     query_url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
@@ -66,8 +65,8 @@ async def main():
                                 break
 
                         complete_data.append(pull_request_json)
-        print(i)
-        with open("gym.json", "a") as outfile:
+
+        with open("data/gym.json", "a") as outfile:
             json.dump(complete_data, outfile)
 
 

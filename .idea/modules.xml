@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MSR_pull_request.iml" filepath="$PROJECT_DIR$/.idea/MSR_pull_request.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/msrl_pulls.iml" filepath="$PROJECT_DIR$/.idea/msrl_pulls.iml" />
     </modules>
   </component>
 </project>
